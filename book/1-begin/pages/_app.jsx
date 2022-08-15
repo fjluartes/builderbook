@@ -7,9 +7,11 @@ import App from 'next/app';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+// import dynamic from 'next/dynamic';
 import { theme } from '../lib/theme';
 
 import Header from '../components/Header';
+// const Header = dynamic(import('../components/Header'), { ssr: false });
 
 const propTypes = {
   Component: PropTypes.elementType.isRequired,
