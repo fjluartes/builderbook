@@ -1,10 +1,10 @@
 /* eslint-disable react/no-danger */
-import React from 'react';
-import Document, { Head, Html, Main, NextScript } from 'next/document';
-import PropTypes from 'prop-types';
+import React from "react";
+import Document, { Head, Html, Main, NextScript } from "next/document";
+import PropTypes from "prop-types";
 
-import createEmotionServer from '@emotion/server/create-instance';
-import createCache from '@emotion/cache';
+import createEmotionServer from "@emotion/server/create-instance";
+import createCache from "@emotion/cache";
 
 const propTypes = {
   styles: PropTypes.arrayOf(
@@ -20,7 +20,7 @@ class MyDocument extends Document {
     // You can consider sharing the same emotion cache between all the SSR requests to speed up performance.
     // However, be aware that it can have global side effects.
     const cache = createCache({
-      key: 'css',
+      key: "css",
       prepend: true,
     });
     const { extractCriticalToChunks } = createEmotionServer(cache);
@@ -38,7 +38,7 @@ class MyDocument extends Document {
 
     const emotionStyleTags = chunks.styles.map((style) => (
       <style
-        data-emotion={`${style.key} ${style.ids.join(' ')}`}
+        data-emotion={`${style.key} ${style.ids.join(" ")}`}
         key={style.key}
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: style.css }}
@@ -54,7 +54,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="en" style={{ height: '100%' }}>
+      <Html lang="en" style={{ height: "100%" }}>
         <Head>
           <meta charSet="utf-8" />
           <meta name="google" content="notranslate" />

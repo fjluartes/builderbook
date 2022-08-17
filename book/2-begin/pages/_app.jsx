@@ -1,15 +1,15 @@
-import createCache from '@emotion/cache';
-import { CacheProvider } from '@emotion/react';
-import CssBaseline from '@mui/material/CssBaseline';
-import { ThemeProvider } from '@mui/material/styles';
-import App from 'next/app';
-import PropTypes from 'prop-types';
-import React from 'react';
-import Head from 'next/head';
+import createCache from "@emotion/cache";
+import { CacheProvider } from "@emotion/react";
+import CssBaseline from "@mui/material/CssBaseline";
+import { ThemeProvider } from "@mui/material/styles";
+import App from "next/app";
+import PropTypes from "prop-types";
+import React from "react";
+import Head from "next/head";
 
-import { theme } from '../lib/theme';
+import { theme } from "../lib/theme";
 
-import Header from '../components/Header';
+import Header from "../components/Header";
 
 const propTypes = {
   Component: PropTypes.elementType.isRequired,
@@ -25,7 +25,7 @@ class MyApp extends App {
     return (
       <CacheProvider
         value={createCache({
-          key: 'css',
+          key: "css",
         })}
       >
         <ThemeProvider theme={theme}>
