@@ -1,7 +1,7 @@
-import Head from 'next/head';
+import Head from "next/head";
 
 const Index = () => (
-  <div style={{ padding: '10px 45px' }}>
+  <div style={{ padding: "10px 45px" }}>
     <Head>
       <title>Index page</title>
       <meta name="description" content="This is SEO description of Index page" />
